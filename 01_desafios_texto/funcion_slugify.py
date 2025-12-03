@@ -7,7 +7,9 @@ def slugify(texto):
     :return: El texto convertido en slug.
     :rtype: str
     """
+
     texto = texto.lower()
+    texto = texto.strip()
     texto = texto.replace(" ", "-")
     texto = texto.replace("á", "a")
     texto = texto.replace("é", "e")
@@ -22,4 +24,4 @@ def slugify(texto):
   
     return texto
 
-print(slugify("Hola Mundo español!"))
+print(slugify("  Hola Mundo español!   "))
